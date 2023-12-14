@@ -7,12 +7,10 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import authApi from 'src/apis/auth.api'
 import { purchasesStatus } from 'src/constants/purchase'
 import { getAvatarURL } from 'src/utils/utils'
-import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
 import { locales } from 'src/i18n/i18n'
 
 function NavHeader() {
-  const { t } = useTranslation()
   const currentLanguage = locales[i18n.language as keyof typeof locales]
   const { setIsAuthenticated, isAuthenticated, setProfile, profile } = useContext(AppContext)
   const queryClient = useQueryClient()
