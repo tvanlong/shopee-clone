@@ -17,7 +17,7 @@
 
 ### Live demo: 
 
-[shopee-clone-sable-tau.vercel.app](shopee-clone-sable-tau.vercel.app)
+🔗 [https://shopee-ui-clone.vercel.app/](https://shopee-ui-clone.vercel.app/)
 
 ### Features
 
