@@ -31,7 +31,7 @@ function Product({ product }: Props) {
               <span className='text-sm'>{formatCurrency(product.price)}</span>
             </div>
           </div>
-          <div className='mt-3 flex items-center justify-end'>
+          <div className='mt-3 flex items-center justify-start'>
             <ProductRating rating={product.rating} />
             <div className='ml-2 text-xs'>
               <span className='text-xs'>{formatNumberToSocialStyle(product.sold)}</span>

@@ -83,7 +83,7 @@ function AsideFilter({ queryConfig, categories }: Props) {
         </svg>
         {t('aside filter.all categories')}
       </Link>
-      <div className='bg-gray-300 h-[1px] my-4' />
+      <div className='bg-[#0000000d] h-[1px] my-4' />
       <ul>
         {categories.map((categoryItem) => {
           const isActive = category === categoryItem._id
@@ -102,7 +102,7 @@ function AsideFilter({ queryConfig, categories }: Props) {
                     )
                   ).toString()
                 }}
-                className={classNames('relative px-2', {
+                className={classNames('relative text-sm px-2', {
                   'text-orange font-semibold': isActive
                 })}
               >
@@ -117,7 +117,7 @@ function AsideFilter({ queryConfig, categories }: Props) {
           )
         })}
       </ul>
-      <Link to={path.home} className='flex items-center font-bold mt-4 uppercase'>
+      <Link to={path.home} className='flex items-center font-bold mt-5 uppercase'>
         <svg
           enableBackground='new 0 0 15 15'
           viewBox='0 0 15 15'
@@ -137,9 +137,8 @@ function AsideFilter({ queryConfig, categories }: Props) {
         </svg>
         {t('aside filter.filter search')}
       </Link>
-      <div className='bg-gray-300 h-[1px] my-4' />
       <div className='my-5'>
-        <div>Khoảng giá</div>
+        <div className='text-sm'>Khoảng giá</div>
         <form className='mt-2' onSubmit={onSubmit}>
           <div className='flex items-start'>
             <Controller
@@ -151,7 +150,7 @@ function AsideFilter({ queryConfig, categories }: Props) {
                     type='text'
                     className='grow'
                     placeholder='₫ TỪ'
-                    classNameInput='p-1 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
+                    classNameInput='text-xs p-1 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
                     classNameError='hidden'
                     onChange={(event) => {
                       field.onChange(event)
@@ -174,7 +173,7 @@ function AsideFilter({ queryConfig, categories }: Props) {
                     type='text'
                     className='grow'
                     placeholder='₫ ĐẾN'
-                    classNameInput='p-1 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
+                    classNameInput='text-xs p-1 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
                     classNameError='hidden'
                     onChange={(event) => {
                       field.onChange(event)
@@ -188,18 +187,18 @@ function AsideFilter({ queryConfig, categories }: Props) {
             />
           </div>
           <div className='mt-1 text-red-600 min-h-[1.25rem] text-sm text-center'>{errors.price_min?.message}</div>
-          <Button className='w-full p-2 uppercase bg-orange text-white text-sm hover:bg-orange/80 flex justify-center items-center'>
+          <Button className='w-full p-1 uppercase bg-orange text-white text-sm hover:bg-orange/80 flex justify-center items-center'>
             Áp dụng
           </Button>
         </form>
       </div>
-      <div className='bg-gray-300 h-[1px] my-4' />
+      <div className='bg-[#0000000d] h-[1px] my-4' />
       <div className='text-sm'>Đánh giá</div>
       <RatingStar queryConfig={queryConfig} />
-      <div className='bg-gray-300 h-[1px] my-4' />
+      <div className='bg-[#0000000d] h-[1px] my-4' />
       <Button
         onClick={handleRemoveAll}
-        className='w-full p-2 uppercase bg-orange text-white text-sm hover:bg-orange/80 flex justify-center items-center'
+        className='w-full p-1 uppercase bg-orange text-white text-sm hover:bg-orange/80 flex justify-center items-center'
       >
         Xóa tất cả
       </Button>

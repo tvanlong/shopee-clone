@@ -36,21 +36,21 @@ function Header() {
             </svg>
           </Link>
           <form className='col-span-8' onSubmit={onSubmitSearch}>
-            <div className='bg-white rounded-sm p-1 flex'>
+            <div className='bg-white text-sm rounded-sm p-1 flex'>
               <input
                 type='text'
-                className='text-black px-3 py-2 flex-grow border-none outline-none bg-transparent'
-                placeholder='Free Ship Đơn Từ 0Đ'
+                className='text-black px-2 py-1 flex-grow border-none outline-none bg-transparent'
+                placeholder='Shopee bao ship 0Đ - Đăng ký ngay!'
                 {...register('name')}
               />
-              <button className='rounded-sm py-2 px-6 flex-shrink-0 bg-orange hover:opacity-90'>
+              <button className='rounded-sm py-2 px-5 flex-shrink-0 bg-orange hover:opacity-90'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
                   viewBox='0 0 24 24'
                   strokeWidth={1.5}
                   stroke='currentColor'
-                  className='w-6 h-6'
+                  className='w-5 h-5'
                 >
                   <path
                     strokeLinecap='round'
